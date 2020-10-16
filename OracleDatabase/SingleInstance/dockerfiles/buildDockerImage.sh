@@ -164,9 +164,11 @@ fi;
 if [ "$VERSION" == "12.1.0.2" ] || [ "$VERSION" == "11.2.0.2" ] || [ "$VERSION" == "18.4.0" ]; then
   DOCKERFILE="$DOCKERFILE.$EDITION"
 fi;
+echo "Deocker file . Edition ==> $DOCKERFILE.$EDITION"
 
 # Oracle Database Image Name
 IMAGE_NAME="oracle/database:$VERSION-$EDITION"
+echo "Image Name --> $IMAGE_NAME"
 
 # Go into version folder
 cd "$VERSION" || {
